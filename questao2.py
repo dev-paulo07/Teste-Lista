@@ -21,7 +21,7 @@ def adicionar_gostos(pessoas: list, path_gostos_csv: str):
     for _, row in df_gostos.iterrows():
         gostos.append({
             "id": int(row["id"]),
-            "gostos": row["gostos"].split(",")  # assume que os gostos estão separados por vírgula no CSV
+            "gostos": row["gostos"].split(",")  
         })
     
     
@@ -33,8 +33,9 @@ def adicionar_gostos(pessoas: list, path_gostos_csv: str):
     return pessoas[:5]
 
 
-resultado = adicionar_gostos(pessoas, "gostos.csv")  # substitua pelo path correto do CSV
+resultado = adicionar_gostos(pessoas, "gostos.csv")  
 
 for pessoa in resultado:
     print(pessoa)
+
 
